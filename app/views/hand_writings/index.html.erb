@@ -1,0 +1,7 @@
+<%= form_for :hand_writing, url: {action: "upload_image"} do |f| %>
+  <div>
+    <%= f.filestack_field :filepicker_url, 'Upload Your Avatar!', id: 'unique-id', input_id: 'unique-input-id' %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
