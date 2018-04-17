@@ -1,7 +1,15 @@
-<%= form_for :hand_writing, url: {action: "upload_image"} do |f| %>
-  <div>
-    <%= f.filestack_field :filepicker_url, 'Upload Your Avatar!', id: 'unique-id', input_id: 'unique-input-id' %>
+<div class="row">
+  <div class="row center margin-top-10">
+    <h1>MS Text Recognition</h1>
   </div>
-
-  <%= f.submit %>
-<% end %>
+  <%= form_for :hand_writing, url: {action: "upload_image"} do |f| %>
+    <div class="row center margin-top-10">
+      <div>
+        <%= f.filestack_field :filepicker_url, 'Upload Hand Written Image!', id: 'unique-id', input_id: 'unique-input-id', class: "btn btn-warning" %>
+      </div>
+    </div>
+    <div class="row center">
+      <%= f.submit "Submit", class: "btn btn-primary margin-top-10"%>
+    </div>
+    <% end %>
+</div>
