@@ -10,7 +10,7 @@ module MSRecognizeText
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-    config.filestack_rails.api_key = 'AAvvflOe2QrWXmM82q3wGz'
+    config.filestack_rails.api_key = 'ADMLACuuxRjKjG4d2eqR7z'
     config.filestack_rails.client_name = 'ms_text_recognition'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
