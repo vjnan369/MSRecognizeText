@@ -6,11 +6,11 @@ class HandWritingsController < ApplicationController
     Rails.logger.debug params.inspect
     @data = "Hello World"
     image_url = params["hand_writing"]["filepicker_url"]
-    text_recognition_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/RecognizeText"
-    body = {"url": image_url, :handwriting=>"true"}
+    text_recognition_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/recognizeText?mode=Handwritten"
+    body = {"url": image_url}
     Rails.logger.debug @data.inspect
     Rails.logger.debug "IMAGE URL "+image_url.inspect
-    header = {"Ocp-Apim-Subscription-Key": "4403855973e5453289f973d851101b1b", "Content-Type": "application/json"}
+    header = {"Ocp-Apim-Subscription-Key": "d6f31213c63544b69af9cf604234d151", "Content-Type": "application/json"}
     response = RestClient.post(text_recognition_url, body.to_json, header)
     callback_url = response.headers[:operation_location]
     sleep 3
